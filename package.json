@@ -1,0 +1,26 @@
+{
+  "name": "kiosco-faro-chueco",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Control de stock del kiosco de recepción del Hostel Faro Chueco (React + Tailwind + localStorage).",
+  "engines": {
+    "node": ">=20.19"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "test": "node --test tests/*.test.js"
+  },
+  "dependencies": {
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "^4.1.0",
+    "@vitejs/plugin-react": "^5.0.0",
+    "tailwindcss": "^4.1.0",
+    "vite": "^7.0.0"
+  }
+}

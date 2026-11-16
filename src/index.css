@@ -1,0 +1,75 @@
+@import "tailwindcss";
+
+/*
+  Paleta del Faro Chueco
+  #14505C petróleo · #EBDDBF arena · #FFFCF5 espuma · #1B2B30 noche
+  #F2B632 sombrilla · #D2513F coral · #58A4A6 agua
+*/
+@theme {
+  --color-petroleo: #14505c;
+  --color-arena: #ebddbf;
+  --color-espuma: #fffcf5;
+  --color-noche: #1b2b30;
+  --color-sombrilla: #f2b632;
+  --color-coral: #d2513f;
+  --color-agua: #58a4a6;
+
+  --font-display: "Rubik", ui-sans-serif, system-ui, sans-serif;
+  --font-sans: "Nunito Sans", ui-sans-serif, system-ui, sans-serif;
+}
+
+/* Colores con significado: cambian solos en modo oscuro */
+:root {
+  --fondo: #fffcf5;
+  --superficie: #ffffff;
+  --tinta: #1b2b30;
+  --tenue: #44585e;
+  --borde: #d8cbad;
+  --primario: #14505c;
+  --sobre-primario: #fffcf5;
+  --suave: #ebddbf;
+  color-scheme: light;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --fondo: #1b2b30;
+    --superficie: #22383f;
+    --tinta: #fffcf5;
+    --tenue: #c2d0d1;
+    --borde: #3b5960;
+    --primario: #58a4a6;
+    --sobre-primario: #1b2b30;
+    --suave: #2c464d;
+    color-scheme: dark;
+  }
+}
+
+@theme inline {
+  --color-fondo: var(--fondo);
+  --color-superficie: var(--superficie);
+  --color-tinta: var(--tinta);
+  --color-tenue: var(--tenue);
+  --color-borde: var(--borde);
+  --color-primario: var(--primario);
+  --color-sobre-primario: var(--sobre-primario);
+  --color-suave: var(--suave);
+}
+
+@layer base {
+  html,
+  body {
+    @apply bg-fondo text-tinta font-sans antialiased;
+    -webkit-tap-highlight-color: transparent;
+  }
+  h1,
+  h2,
+  h3,
+  button {
+    @apply font-display;
+  }
+  :focus-visible {
+    outline: 3px solid var(--color-sombrilla);
+    outline-offset: 2px;
+  }
+}
